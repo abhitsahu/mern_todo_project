@@ -37,7 +37,7 @@ const Todo = () => {
       } else {
         if(id){ //user data ko backend mein add karne k liye
 
-          await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v2/addTask`, {title: Inputs.title, body: Inputs.body, id: id}).then(()=>{//user data ko backend mein add karne k liye
+          await axios.post(`${import.meta.env.VITE_BACKEND_URL}api/v2/addTask`, {title: Inputs.title, body: Inputs.body, id: id}).then(()=>{//user data ko backend mein add karne k liye
       
             toast.success("Your Task Is Added");
           })
@@ -59,8 +59,8 @@ const Todo = () => {
       if(id){
 
           try {
-            await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/v2/deleteTask/${cargid}`, { data: { id: id } });
-            const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v2/getTasks/${id}`);
+            await axios.delete(`${import.meta.env.VITE_BACKEND_URL}api/v2/deleteTask/${cargid}`, { data: { id: id } });
+            const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v2/getTasks/${id}`);
             setArray(res.data.list);  // Update the tasks list immediately
             toast.success("Your Task is Deleted");
           } catch (error) {
@@ -90,7 +90,7 @@ const Todo = () => {
 
     useEffect(() => {
       const fetch = async () => {
-        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v2/getTasks/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v2/getTasks/${id}`);
         setArray(res.data.list);
       };
 
@@ -137,7 +137,7 @@ const Todo = () => {
             <Update display={dis} update={toUpdateArray} refreshTasks={() => {
               if (id) {
                 const fetch = async () => {
-                  const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v2/getTasks/${id}`);
+                  const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v2/getTasks/${id}`);
                   setArray(res.data.list);
                 };
                 fetch();

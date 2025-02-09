@@ -23,12 +23,12 @@ const Login = () => {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/login`, Inputs);
+            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}api/v1/login`, Inputs);
             sessionStorage.setItem("id", res.data.others._id);
             dispatch(authActions.login());
 
             // Fetch tasks immediately after login
-            await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v2/getTasks/${res.data.others._id}`);
+            await axios.get(`${import.meta.env.VITE_BACKEND_URL}api/v2/getTasks/${res.data.others._id}`);
             toast.success("Login Successful!");
             
             // Navigate to todo page

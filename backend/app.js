@@ -6,7 +6,11 @@ require("./connection/connection")
 const auth = require("./routes/auth")
 const list = require("./routes/list")
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://mern-todo-project-gf23-client.vercel.app", // Allow requests from this origin
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true // Allow credentials if needed
+}));
 
 
 

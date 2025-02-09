@@ -19,7 +19,7 @@ const Update = ({display, update, refreshTasks}) => {
     }
 
     const submit = async ()=>{
-      await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/v2/updateTask/${update._id}`,Inputs).then((res)=>{
+      await axios.put(`${import.meta.env.VITE_BACKEND_URL}api/v2/updateTask/${update._id}`,Inputs).then((res)=>{
         toast.success(res.data.message);
         refreshTasks();
       })

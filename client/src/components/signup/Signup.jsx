@@ -18,7 +18,7 @@ const Signup = () => {
 
     const submit = async (e)=>{
         e.preventDefault();
-        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/register`, Inputs).then((res) =>{
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}api/v1/register`, Inputs).then((res) =>{
             // alert(res.data.message)
             if(res.data.message === "user already exists"){
 
