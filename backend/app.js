@@ -7,7 +7,7 @@ const auth = require("./routes/auth")
 const list = require("./routes/list")
 app.use(express.json());
 app.use(cors({
-    origin: "https://mern-todo-project-6dtb-frontend.vercel.app", // Update this to your frontend URL
+    origin: process.env.FRONTEND_URL, // Update this to your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true // Allow credentials if needed
 }));
