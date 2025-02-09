@@ -6,25 +6,31 @@ const bcrypt = require("bcryptjs");
 // Define your routes here
 //signup
 router.post("/register", async (req, res) => {
-    // Handle registration
-
     try {
+        console.log("Received Register Request:", req.body); // Log the incoming request body
 
-        const {email,username,password} = req.body;
+        const { email, username, password } = req.body;
+        if (!email || !username || !password) {
+            return res.status(400).json({ message: "Missing fields" }); // Check for missing fields
+        }
 
-        const hashpassword = bcrypt.hashSync(password);
-        const user = new User({email,username,password: hashpassword});
-        // await user.save().then(()=> res.status(200).json({user:user}));
-        await user.save().then(()=> res.status(200).json({message: "sign up successfull"})); //frontent mein user ka data dikh rha tah uss k liye json ko change kiya
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            console.log("User already exists"); // Log if user already exists
+            return res.status(400).json({ message: "User already exists" });
+        }
 
-        
+        const hashpassword = bcrypt.hashSync(password, 10); // Hash the password
+        const user = new User({ email, username, password: hashpassword });
+
+        await user.save();
+        console.log("User saved successfully"); // Log successful user save
+
+        res.status(201).json({ message: "Sign up successful" });
     } catch (error) {
-        res.status(200).json({
-            message:"user already exists"
-        });
-        
+        console.error("Error in register route:", error); // Log any errors
+        res.status(500).json({ message: "Internal server error" });
     }
-
 });
 
 
