@@ -7,7 +7,7 @@ const auth = require("./routes/auth")
 const list = require("./routes/list")
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173", "https://localhost:5173", "https://mern-todo-project-backend.vercel.app"], // Allow both http and https
+    origin: ["http://localhost:5173/", "https://localhost:5173/", "https://mern-todo-project-backend.vercel.app/"], // Allow both http and https
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true // Allow credentials if needed
 }));
