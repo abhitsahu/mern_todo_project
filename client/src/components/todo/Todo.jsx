@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import './Todo.css'
 import TodoCards from './TodoCards';
 import { ToastContainer, toast } from 'react-toastify';
-import Update from './update';
+import Update from './Update';
 import axios from 'axios';
 
 let id = sessionStorage.getItem("id");//user data ko backend mein add karne k liye
