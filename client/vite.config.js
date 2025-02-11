@@ -4,13 +4,15 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
+   server: {
     host: '0.0.0.0',  // Required for Render
-    port: process.env.PORT || 5173, // Use Render's assigned port or default to 5173
-    strictPort: true,  // Prevent Vite from switching to another port
+    port: process.env.PORT || 5173, // Use Render's assigned port or fallback to 5173
+    strictPort: true,
+    allowedHosts: ['mern-todo-project-usq7.onrender.com'],  // Allow your Render domain
   },
   preview: {
-    port: process.env.PORT || 4173, // Ensure preview mode uses the correct port
+    port: process.env.PORT || 4173,
     host: '0.0.0.0',
-  }
+    allowedHosts: ['mern-todo-project-usq7.onrender.com'],
+  },
 })
