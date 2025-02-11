@@ -8,11 +8,11 @@ export default defineConfig({
     host: '0.0.0.0',  // Required for Render
     port: process.env.PORT || 5173, // Use Render's assigned port or fallback to 5173
     strictPort: true,
-    allowedHosts: ['mern-todo-project-usq7.onrender.com'],  // Allow your Render domain
+    allowedHosts: ['mern-todo-project-bna7.onrender.com'],  // Allow your Render domain
   },
   preview: {
     port: process.env.PORT || 4173,
     host: '0.0.0.0',
-    allowedHosts: ['mern-todo-project-usq7.onrender.com'],
+    allowedHosts: ['mern-todo-project-bna7.onrender.com'],
   },
 })
