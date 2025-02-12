@@ -15,4 +15,6 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: ['mern-todo-project-bna7.onrender.com'],
   },
+
 })
+
