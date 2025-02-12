@@ -101,7 +101,7 @@ const Todo = () => {
   return (
     <div>
       <div className='todo'>
-        <ToastContainer/>
+        <ToastContainer className={'Toastify__ToastContainer'} />
         <div className="todo-main container d-flex justify-content-center align-items-center">
 
             <div className='d-flex flex-column todo-inputs-div w-50'>
@@ -110,7 +110,7 @@ const Todo = () => {
             </div>
 
             <div className='w-50 d-flex justify-content-end my-3'>
-              <button className='home-btn px-2 py-1' onClick={submit} >Add</button>
+              <button className='add-button home-btn px-3 py-2' onClick={submit} >Add</button>
             </div>
         </div>
 

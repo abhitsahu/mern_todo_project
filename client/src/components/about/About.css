@@ -1,0 +1,49 @@
+/* About section styles */
+.about {
+    background-color: #f8f9fa; /* Light background for a classic look */
+    color: #333; /* Dark text for contrast */
+    padding: 40px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    
+}
+
+/* Hover effect for the about section */
+.about:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+/* Style for the h1 tag */
+h1 {
+    font-size: 3rem; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    color: #333; /* Set a nice text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Style for the p tag */
+p {
+    font-size: 1.25rem; /* Increase paragraph font size */
+    font-family: 'Verdana', sans-serif; /* Change font family */
+    color: #555; /* Set a softer text color */
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 15px; /* Add some space below the paragraph */
+}

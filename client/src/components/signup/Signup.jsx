@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './Signup.css'
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 const Signup = () => {
@@ -35,7 +35,7 @@ const Signup = () => {
     }
 
   return (
-    <div className='container'>
+    <div className='signup-container'>
         <ToastContainer />
         <form className="form">
             <p className="title">Register </p>
@@ -56,7 +56,7 @@ const Signup = () => {
                 <span>Password</span>
             </label>
             <button className="submit" onClick={submit}>Submit</button>
-            <p className="signin">Already have an acount ? <a href="#">Signin</a> </p>
+            <p className="signin">Already have an acount ? <Link to={'/login'} >Signin</Link> </p>
         </form>
     </div>
   )

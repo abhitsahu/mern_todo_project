@@ -9,6 +9,7 @@ import Login from './components/login/Login'
 import Todo from './components/todo/Todo'
 import { useDispatch } from 'react-redux'
 import { authActions } from './store'
+import './App.css'
 
 
 const App = () => {
@@ -37,27 +38,24 @@ const App = () => {
 
   
   return (
-    <div>
+    <div className="wrapper">
+      <div className="content">
+        <Router>
+          <Navbar onLogout={handleLogout}/>
 
-      <Router>
-        <Navbar onLogout={handleLogout}/>
+          <Routes>
 
-        <Routes>
+            <Route exact path='/' element={<Home/>}/>
+            <Route exact path='/about' element={<About/>}/>
+            <Route exact path='/todo' element={<Todo/>}/>
+            <Route exact path='/signup' element={<Signup/>}/>
+            <Route exact path='/login' element={<Login/>}/>
 
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/about' element={<About/>}/>
-          <Route exact path='/todo' element={<Todo/>}/>
-          <Route exact path='/signup' element={<Signup/>}/>
-          <Route exact path='/login' element={<Login/>}/>
+          </Routes>
 
-
-
-        </Routes>
-
-      </Router>
-
-    <Footer />
-
+        </Router>
+      </div>
+      <Footer />
     </div>
   )
 }

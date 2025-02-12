@@ -6,7 +6,7 @@ const TodoCards = ({title, body, id, delid, display, UpdateId, toBeUpdate }) => 
     <div className='p-3 todo-card'>
         <div>
             <h3>{title}</h3>
-            <p className='todo-card-p'>{body.split("", 40)}...</p>
+            <p className='todo-card-p'>{body.split("", 40)}</p>
         </div>
 
         <div className="d-flex justify-content-between ">

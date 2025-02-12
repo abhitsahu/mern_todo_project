@@ -1,0 +1,53 @@
+/* Footer styles */
+.footer {
+    background-color: #282c34; /* Dark background for classic look */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    position: relative; /* Positioning for responsiveness */
+    width: 100%; /* Ensure footer takes full width */
+    bottom: 0; /* Align footer to the bottom */
+}
+
+/* Ensure the footer is always at the bottom */
+html, body {
+    height: 100%; /* Full height for body */
+    margin: 0; /* Remove default margin */
+}
+
+.wrapper {
+    min-height: 100vh; /* Ensure wrapper takes full height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.content {
+    flex: 1; /* Allow content to grow and fill space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Link styles */
+.footer a {
+    color: #61dafb; /* Light blue color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer a:hover {
+    color: #21a1f1; /* Darker blue on hover */
+}
+
+/* Additional styling for footer content */
+.footer h4 {
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.footer p {
+    margin: 5px 0; /* Margin for spacing */
+}

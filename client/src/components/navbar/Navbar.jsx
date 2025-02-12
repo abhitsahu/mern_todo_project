@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux'
 import { authActions } from '../../store'
 // import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
+import './Navbar.css' // Import the Navbar CSS
+
 
 
 
