@@ -6,7 +6,7 @@ const About = () => {
     <div className='about'>
         <div className="container">
         <h1>About Us</h1>
-        <p>Welcome to Task – your ultimate productivity companion! We believe that staying organized shouldn’t be a hassle. That’s why we created a simple yet powerful to-do list tool that helps you manage your daily tasks, track progress, and boost efficiency.
+        <p>Welcome to Task– your ultimate productivity companion! We believe that staying organized shouldn’t be a hassle. That’s why we created a simple yet powerful to-do list tool that helps you manage your daily tasks, track progress, and boost efficiency.
 
           At Task, we understand that life moves fast. Whether you're a busy professional, a student juggling assignments, or someone who simply loves planning, our intuitive platform keeps you on top of everything. Add tasks, set priorities, and never miss a deadline again!
           
